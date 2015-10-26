@@ -8,6 +8,8 @@ namespace SimpleBlog.Models
 {
     public class BlogContext : DbContext
     {
+        // Use the default connection, as app grows we will need
+        // to have more connections
         public BlogContext() : base("DefaultConnection")
         { }
 
