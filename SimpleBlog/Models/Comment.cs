@@ -12,7 +12,9 @@ namespace SimpleBlog.Models
         [Required]
         public string AuthorName { get; set; }
         [Required]
+        [EmailAddress]
         public string Email { get; set; }
+        [Url]
         public string WebsiteUrl { get; set; }
         [Required]
         public string CommentText { get; set; }

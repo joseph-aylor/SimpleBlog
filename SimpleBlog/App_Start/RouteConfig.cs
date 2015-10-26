@@ -16,7 +16,7 @@ namespace SimpleBlog
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Categories", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Posts", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

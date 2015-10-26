@@ -1,0 +1,3 @@
+﻿TODO: Make Partial Views for the indexes
+Change master page so links go to category/post
+Add real security
