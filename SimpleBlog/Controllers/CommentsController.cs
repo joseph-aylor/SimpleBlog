@@ -1,8 +1,8 @@
 ﻿using SimpleBlog.Models;
+using SimpleBlog.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace SimpleBlog.Controllers
@@ -18,9 +18,13 @@ namespace SimpleBlog.Controllers
         {
             try
             {
+                // This would be a parameter, but it had hyphens.
+                // So we'll pull it out of the Request Object
+                var recaptchaReponse = Request["g-recaptcha-response"];
+
                 comment.DatePosted = DateTime.Now;
 
-                if(ModelState.IsValid)
+                if(ModelState.IsValid && CaptchaUtility.Verify(recaptchaReponse, "6Lfukw8TAAAAAPcA4h__z3i6Y9EZU0G-kER1Ad60"))
                 {
                     db.Comments.Add(comment);
                     db.SaveChanges();
