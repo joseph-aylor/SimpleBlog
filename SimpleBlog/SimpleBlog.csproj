@@ -195,6 +195,7 @@
     <Content Include="Views\Posts\Index.cshtml" />
     <Content Include="Views\Comments\_CommentIndex.cshtml" />
     <Content Include="Views\Comments\_CommentCreate.cshtml" />
+    <Content Include="Views\Posts\_PostsEmbeddedIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
