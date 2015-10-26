@@ -1,45 +1,28 @@
 ﻿@model IEnumerable<SimpleBlog.Models.Comment>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.AuthorName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.WebsiteUrl)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CommentText)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DatePosted)
-        </th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.AuthorName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
+
+@foreach (var item in Model)
+{
+    <hr />
+    <h4>
+        @Html.DisplayFor(modelItem => item.AuthorName)
+        (
+        @Html.DisplayFor(modelItem => item.Email)
+        @if (item.WebsiteUrl != null) { 
+
+            <text>\</text>
+            
             @Html.DisplayFor(modelItem => item.WebsiteUrl)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CommentText)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DatePosted)
-        </td>
-    </tr>
+        }
+        )
+        <br />
+        Said On
+
+        @Html.DisplayFor(modelItem => item.DatePosted)
+    </h4>
+    <p>
+        @Html.DisplayFor(modelItem => item.CommentText)
+    </p>
 }
 
-</table>

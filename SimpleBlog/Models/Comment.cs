@@ -10,13 +10,16 @@ namespace SimpleBlog.Models
     {
         public int Id { get; set; }
         [Required]
+        [Display(Name = "Author Name")]
         public string AuthorName { get; set; }
         [Required]
         [EmailAddress]
         public string Email { get; set; }
         [Url]
+        [Display(Name = "Website Url")]
         public string WebsiteUrl { get; set; }
         [Required]
+        [Display(Name = "Content")]
         public string CommentText { get; set; }
         public DateTime DatePosted { get; set; }
 

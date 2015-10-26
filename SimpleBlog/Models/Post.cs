@@ -11,6 +11,7 @@ namespace SimpleBlog.Models
         [Required]
         public int Id { get; set; }
         [Required]
+        [Display(Name ="Author Name")]
         public string AuthorName { get; set; }
         [Required]
         public string Title { get; set; }
@@ -18,8 +19,10 @@ namespace SimpleBlog.Models
         public string Content { get; set; }
         [Required]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [Display(Name ="Date Posted")]
         public DateTime DatePosted { get; set; }
         
+        [Display(Name = "Category")]
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
 

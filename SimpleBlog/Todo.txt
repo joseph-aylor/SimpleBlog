@@ -1,5 +1,5 @@
-﻿Make Partial Views for the indexes
-Change master page so links go to category/post
+﻿Change master page so links go to category/post
 Move Scripts for Embedded Form
 Auto Tests
 Move New Comment Form to other side
+HTML5 Semantics (Article/Main)
