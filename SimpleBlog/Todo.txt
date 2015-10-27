@@ -1,5 +1,4 @@
-﻿Change master page so links go to category/post
+﻿Use Real Asp.net Login System (with facebook google and the like)
 Move Scripts for Embedded Form
 Auto Tests
-Move New Comment Form to other side
 HTML5 Semantics (Article/Main)
